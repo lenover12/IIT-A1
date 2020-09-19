@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <title>Leo's Project</title>
+</head>
+
+<body>
+  <style>
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  div.a {
+    text-align: center;
+  }
+  </style>
+
+  <table cellspacing="20">
+    <tr>
+      <td> <img src="Images/theDeviceSetup.png" alt="mimi box" height="750"></td>
+        <td>
+        <h1>The Mimi-Box</h1>
+        <h2>a party game for everyone</h2>
+      </td>
+    </tr>
+  </table>
+<hr size="2" noshade>
+
+<div class="a">
+<table cellspacing="40">
+  <tr>
+    <td>
+<h2><em>The Project Overview</em> </h2>
+
+<p>The Mimi-box is a party game that uses software not unlike voice recognition to compare player’s voices to each other’s, this is a game that’s all about mimicking other players to your best ability. The Mimi-box has an on-board pre-recorded voice that acts somewhat as a host, guiding and incentivising players on how to play the numerous game modes. Players will be put into situations where they must quickly think of something to say, their aim is to speak out a message or statement that the other players will be unable to reproduce, I.e. an accented message or a ridiculous joke that induces laughter.
+</p>
+</td>
+</tr>
+  <tr>
+    <td>
+    <h2><em>My Motivation</em> </h2>
+    <p>
+Statistics taken in 2006 state that the average 15 to 34-year-old spends just under 3 hours with friends and 10 hours with their family each weekend. With the continuous popularity of tabletop and party games that facilitate the human need for social interaction, the Mimi-box concept falls into an underpopulated party game category which will cause it to stand out in the global market of party games from its base functionality alone. The Mimi-box is a tangible product that is easy to use and fun to pass around which fits into the fast and instant gratification focused entertainment industry of today. Furthermore, the Mimi-box is an ideal party game that can be used for multiple social gatherings from family game nights to business events as it requires the players to interact with each other, includes everyone, and doesn’t stop when alcohol is involved.
+      </p>
+      </td>
+  </tr>
+</table>
+
+
+  <table cellspacing="40">
+
+  <tr>
+    <td>
+    <h2><em>Mimi-Box description</em> </h2>
+    <p>
+    <em> Gameplay:</em>
+<br>
+<br>
+      This party game is played with a group of 2 people or more, the aim of the game is for players to imitate each other’s voice as closely as possible. Once turned on, the Mimi-box plays a pre-recorded voice which prompts the players to use the ‘speak’ button to record themselves speaking their own names of which the Mimi-box will temporarily store. Once all players have entered their names, one player will press the ‘skip’ button.
+      Whenever there is a pause in input, the game will give instruction to the players of what they need to do, this includes examples of statements or jokes players can use during a game mode. Once it has given instructions twice without player input, the game will pause. The players can press ‘skip’ to un pause the game, and ‘skip’ when un-paused to pass that players turn.
+<br>
+<br>
+The Mimi-box’s voice will prompt the players to state the game mode they want to play, ‘Normal’, ‘1 for all’, ‘am I funny?’. They will need to do this using their voice which the raspberry pi will translate to text using voice to text technology and start the game category the voice closely matched.
+
+
+  <td>
+    <p>
+      In normal mode, each player is prompted to record a ‘message’ of their own choosing, after all players have provided a message the game will assign and require another player who will listen, then attempt to imitate it.
+      1 for all mode has one player record their message, and each additional player competes to see who can imitate with the highest accuracy.
+      Am I funny mode will give players a role play situation where they have to say the first thing that comes to their head, then another player is assigned to imitate it.
+      The game will play a sound effect while the raspberry pi calculates how closely the voices match using spectrogram graph and pattern matching technology, as the players only need to sound similar, this technology is sufficient. The voice match will be represented by a percentage and told to the players by the Mimi-box’s voice.
+      Messages can be statements, short jokes, accented sentences, or anything of the players choosing within a time frame of 10 seconds.
+      <br>
+      <br>
+<em>Design:</em>
+<br>
+<br>
+The Mimi-box is a 10cm by 10cm case somewhat reminiscent of a hexagonal prism (see figure 1) that houses both the hardware required to run the Mimi-box, audio input & output, and power. It is a simplistic design with a wide base that incites the users to place the Mimi-box the correct way up, this is further encouraged by the weight of the Mimi-box being centralised in the base and centre. The Mimi-box is expected to be used by children and youths passing it around, and older users under the influence of alcohol, therefor the durability, resistance and shock absorption have all been considered into the design choice.
+The Mimi-box is battery powered by 6 AA batteries which are located in the base and protected by a battery compartment cover. On one of the two large faces at the top of the Mimi-box, there are buttons to control the game. These buttons are; One power switch, volume up & down, skip. The other large face consists of the press and hold ‘speak’ button and the microphone input hidden behind part of the case with grated holes for accurate voice recording, while the speaker is at the very top face of the Mimi-box.
+
+
+      </p>
+      </td>
+  </tr>
+</table>
+
+
+  <table cellspacing="40">
+  <tr>
+    <td>
+    <h2><em>Tools and Technologies</em> </h2>
+    <p>
+      Raspberry Pi Zero is the computer running this game, it uses the audio signal inputs and converts them into spectrograms, then runs a pattern matching system against the resulting images.
+      The Mimi-box uses the Adafruit 12S MEMS Microphone for sound input. A mini HAT, the adafruit 12S 3W Stereo Speaker Bonnet mini Kit, using 12S digital sound to create clear crisp audio. Saving power, the Mimi-box uses 1 mono 40mm diameter 4 Ohm 3-watt speaker.
+      The power is provided by a 6xAA battery pack connected via a universal battery eliminator circuit.
+      <br>
+      <img src="Images/theDevice.png" alt="party game project hardware" height="750" class="center">
+      </p>
+      </td>
+  </tr>
+  <tr>
+    <td>
+    <h2><em>Skills Required</em> </h2>
+    <p>
+      With the Linux based ‘Raspberry Pi OS’. It is feasible to find a developer with the skills required to build this software as there are many similarities with open source software available by Pi programmers. The plastic shell will be designed to allow streamline hardware installation and insolation which will be prototyped and manufactured.
+      Specially written software includes the core game itself, the voice to spectrogram converter (the pi needs to temporarily store the spectrograms). A specialised pattern matching system to compare the spectrograms with a deliberate varying degree of slack and error. The microphone and pins require soldering to the raspberry pi and the product will require a recording speech from a voice actor. The Pi and Adafruit hardware are readily available to be purchased in bulk batches.
+      </p>
+      </td>
+  </tr>
+  <tr>
+    <td>
+    <h2><em>Outcome</em> </h2>
+    <p>
+      The Mimi-box will become a household party game, social events will use the Mimi-box as a tool for inclusivity across class and culture barriers and use it as an ice breaker. Friends and families will meet for the purpose of playing this party game allowing them to fulfil their need for social interaction.
+      Party games will be expanded in their vision to include new technologies not unlike voice recognition and other party game designers will be interested in this underpopulated game category.
+      </p>
+      </td>
+  </tr>
+</table>
+</div>
+
+<hr size="2" noshade>
+<table>
+  <tr>
+    <td>
+      <a href="index.html">Homepage</a>
+    </td>
+    <td>
+      <a href="job.html">Job Goal</a>
+    </td>
+    <td>
+      <a href="test.html">Personality Tests</a>
+    </td>
+    <td>
+      <a href="references.html">References</a>
+    </td>
+  </tr>
+</table>
+
+</body>
+
+</html>
